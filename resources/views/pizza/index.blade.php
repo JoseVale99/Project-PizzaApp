@@ -34,15 +34,15 @@
                         <div class="form-group">
 
                             <label>Pizza Price ($)</label>
-                            <input type="number" class="form-control mt-3" placeholder="small pizza price">
-                            <input type="number" class="form-control mt-3" placeholder="medium pizza price">
-                            <input type="number" class="form-control mt-3" placeholder="large pizza price">
+                            <input type="number" name="small_pizza_price" class="formm-control mt-3" placeholder="small pizza price">
+                            <input type="number" name="medium_pizza_price" class="form-control mt-3" placeholder="medium pizza price">
+                            <input type="number" name="large_pizza_price" class="form-control mt-3" placeholder="large pizza price">
 
                         </div>
 
                         <div class="form-group ">
                             <label for="description">Category</label>
-                            <select class="form-control" name="" id="">
+                            <select class="form-control" name="category" id="">
                                 <option value=""></option>
                                 <option value="vegetarian">Vegetarian Pizza</option>
                                 <option value="nonvegetarian">Non vegetarian Pizza</option>
