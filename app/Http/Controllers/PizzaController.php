@@ -9,7 +9,7 @@ class PizzaController extends Controller
     //  Return the main view of orders
     public function index()
     {
-      return 'list of pizza';  
+      return  view('pizza.index');
     }
 
 
