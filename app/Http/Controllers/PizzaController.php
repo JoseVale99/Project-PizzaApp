@@ -9,19 +9,19 @@ class PizzaController extends Controller
     //  Return the main view of orders
     public function index()
     {
-        return view('pizza.index');
+      return 'list of pizza';  
     }
 
 
     public function create()
     {
-        //
+        return view('pizza.create');
     }
 
  
     public function store(Request $request)
     {
-        //
+        
     }
 
  
