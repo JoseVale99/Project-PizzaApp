@@ -19,7 +19,8 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Pizza') }}</div>
-
+                <form action="{{route('pizza.store')}}" method="POST">
+                    @csrf
                     <div class="card-body">
                         <div class="form-group ">
                             <label for="name">Name of Pizza</label>
@@ -60,7 +61,7 @@
                         </div>
 
                     </div>
-                    
+                </form>
 
                 </div>
             </div>
