@@ -49,7 +49,7 @@
                             <div class="form-group">
 
                                 <label>Pizza Price ($)</label>
-                                <input type="number" name="small_pizza_price" class="formm-control mt-3"
+                                <input type="number" name="small_pizza_price" class="form-control mt-3"
                                     placeholder="small pizza price">
                                 <input type="number" name="medium_pizza_price" class="form-control mt-3"
                                     placeholder="medium pizza price">
