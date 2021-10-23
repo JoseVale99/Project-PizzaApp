@@ -44,7 +44,7 @@
                             <td>{{$pizza->medium_pizza_price}}</td>
                             <td>{{$pizza->large_pizza_price}}</td>
                             <td>
-                                <a href="" class="btn btn-primary"><img src="https://img.icons8.com/material-outlined/20/000000/edit--v3.png"/></a>
+                                <a href="{{route('pizza.edit', $pizza->id)}}" class="btn btn-primary"><img src="https://img.icons8.com/material-outlined/20/000000/edit--v3.png"/></a>
                                 <a href="" class="btn btn-danger"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/20/000000/external-delete-miscellaneous-kiranshastry-solid-kiranshastry.png"/></a>
                             </td>
                           </tr>
