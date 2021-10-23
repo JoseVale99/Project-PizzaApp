@@ -26,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/pizza', [PizzaController::class, 'index'])->name('pizza.index');
 Route::get('/pizza/create', [PizzaController::class, 'create'])->name('pizza.create');
 Route::post('/pizza/store', [PizzaController::class, 'store'])->name('pizza.store');
+Route::get('/pizza/{id}/edit', [PizzaController::class, 'edit'])->name('pizza.edit');
