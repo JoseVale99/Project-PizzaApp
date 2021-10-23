@@ -11,7 +11,8 @@ class PizzaController extends Controller
     //  Return the main view of orders
     public function index()
     {
-      return  view('pizza.index');
+        $pizzas = Pizza::all();
+      return  view('pizza.index',compact('pizzas'));
     }
 
 
@@ -38,7 +39,7 @@ class PizzaController extends Controller
           ]
       );
 
-      return redirect()->route('pizza.index');
+      return redirect()->route('pizza.index')->with('message','Pizza added successfully!');
     }
 
  
