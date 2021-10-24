@@ -28,3 +28,4 @@ Route::get('/pizza/create', [PizzaController::class, 'create'])->name('pizza.cre
 Route::post('/pizza/store', [PizzaController::class, 'store'])->name('pizza.store');
 Route::get('/pizza/{id}/edit', [PizzaController::class, 'edit'])->name('pizza.edit');
 Route::put('/pizza/{id}/update', [PizzaController::class, 'update'])->name('pizza.update');
+Route::delete('/pizza/{id}/delete', [PizzaController::class, 'destroy'])->name('pizza.destroy');
