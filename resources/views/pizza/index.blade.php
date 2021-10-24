@@ -6,7 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('All Pizza') }}</div>
-
+                       <a href="{{route('pizza.create')}}">
+                        <button class="btn btn-success" style="float :right;" >Add Pizza</button>
+                       </a>
                     <div class="card-body">
                         @if (session('message'))
                             <div class="alert alert-success" role="alert">
@@ -86,7 +88,7 @@
                                 @endforelse
                             </tbody>
                         </table>
-
+                        {{$pizzas->links()}}
                     </div>
                 </div>
             </div>
