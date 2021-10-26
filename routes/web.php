@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\PizzaController;
-use App\Http\Controllers\UserOrderController;
+use App\Http\Controllers\UserOderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,7 +35,7 @@ Route::group(['middleware'=>'auth','admin'],function () {
     
     // user order pizza 
 
-    Route::get('/user/order', [UserOrderController::class, 'index'])->name('user.order');
+    Route::get('/user/order', [UserOderController::class, 'index'])->name('user.order');
   
 
 });
