@@ -67,13 +67,7 @@ class PizzaController extends Controller
          $path = $pizza->image;
        }
 
-       $pizza->fill($request->input());
-       $pizza->name = $request->name;
-       $pizza->description = $request->description;
-       $pizza->small_pizza_price = $request->small_pizza_price;
-       $pizza->medium_pizza_price = $request->medium_pizza_price;
-       $pizza->large_pizza_price = $request->large_pizza_price;
-       $pizza->category = $request->category;
+       $pizza->fill($request->input());       
        $pizza->image = $path;
        $pizza->save();
 
