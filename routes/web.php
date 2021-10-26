@@ -35,7 +35,7 @@ Route::group(['middleware'=>'auth','admin'],function () {
     
     // user order pizza 
 
-    Route::get('/user/order', [UserOrderController::class, 'index'])->name('pizza.index');
+    Route::get('/user/order', [UserOrderController::class, 'index'])->name('user.order');
   
 
 });
