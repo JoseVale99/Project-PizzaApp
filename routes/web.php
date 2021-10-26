@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\UserOrderController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +33,9 @@ Route::group(['middleware'=>'auth','admin'],function () {
     Route::put('/pizza/{id}/update', [PizzaController::class, 'update'])->name('pizza.update');
     Route::delete('/pizza/{id}/delete', [PizzaController::class, 'destroy'])->name('pizza.destroy');
     
+    // user order pizza 
+
+    Route::get('/user/order', [UserOrderController::class, 'index'])->name('pizza.index');
+  
+
 });
