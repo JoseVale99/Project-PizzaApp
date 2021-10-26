@@ -23,9 +23,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/pizza', [PizzaController::class, 'index'])->name('pizza.index');
-Route::get('/pizza/create', [PizzaController::class, 'create'])->name('pizza.create');
-Route::post('/pizza/store', [PizzaController::class, 'store'])->name('pizza.store');
-Route::get('/pizza/{id}/edit', [PizzaController::class, 'edit'])->name('pizza.edit');
-Route::put('/pizza/{id}/update', [PizzaController::class, 'update'])->name('pizza.update');
-Route::delete('/pizza/{id}/delete', [PizzaController::class, 'destroy'])->name('pizza.destroy');
+Route::group(['middleware'=>'auth','admin'],function () {
+    Route::get('/pizza', [PizzaController::class, 'index'])->name('pizza.index');
+    Route::get('/pizza/create', [PizzaController::class, 'create'])->name('pizza.create');
+    Route::post('/pizza/store', [PizzaController::class, 'store'])->name('pizza.store');
+    Route::get('/pizza/{id}/edit', [PizzaController::class, 'edit'])->name('pizza.edit');
+    Route::put('/pizza/{id}/update', [PizzaController::class, 'update'])->name('pizza.update');
+    Route::delete('/pizza/{id}/delete', [PizzaController::class, 'destroy'])->name('pizza.destroy');
+    
+});
