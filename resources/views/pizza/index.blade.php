@@ -47,8 +47,8 @@
                         @endif
 
 
-                        <table class="table table-bordered">
-                            <thead>
+                        <table class="table table-bordered table-responsive">
+                            <thead class="thead-dark">
                                 <tr>
                                     <th scope="col" class="text-center">#</th>
                                     <th scope="col" class="text-center">Image</th>
@@ -76,10 +76,10 @@
                                         <td>{{ $pizza->small_pizza_price }}</td>
                                         <td>{{ $pizza->medium_pizza_price }}</td>
                                         <td>{{ $pizza->large_pizza_price }}</td>
-                                        <td>
-                                            <a href="{{ route('pizza.edit', $pizza->id) }}" class="btn btn-primary"><img
+                                        <td class="text-center">
+                                            <a href="{{ route('pizza.edit', $pizza->id) }}" class="btn btn-primary mt-2"><img
                                                     src="https://img.icons8.com/material-outlined/20/000000/edit--v3.png" /></a>
-                                            <button class="btn btn-danger" data-toggle="modal"
+                                            <button class="btn btn-danger mt-2" data-toggle="modal"
                                                 data-target="#exampleModal{{ $pizza->id }}" type="button"><img
                                                     src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/20/000000/external-delete-miscellaneous-kiranshastry-solid-kiranshastry.png" /></button>
                                             <!-- Modal -->
