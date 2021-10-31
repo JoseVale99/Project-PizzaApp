@@ -82,4 +82,13 @@ class UserOderController extends Controller
     {
         //
     }
+
+    public function changeStatus(Request $request, $id){
+
+        
+        $order = Order::find($id);
+        Order::where('id', '=',$id)->update(['status' =>$request->status]);
+
+        return redirect()->route('user.order')->with('message','Pizza update status successfully!');
+    }
 }
