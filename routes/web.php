@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\UserOderController;
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -16,14 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/', [FrontendController::class, 'index'])->name('frontpage');
+Route::get('/pizza/{id}', [FrontendController::class, 'show'])->name('pizza.show');
 
 Route::group(['middleware'=>'auth','admin'],function () {
     Route::get('/pizza', [PizzaController::class, 'index'])->name('pizza.index');
