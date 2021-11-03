@@ -73,7 +73,9 @@
                                             @if ($order->status == 'accepted')
                                                 <div class="text-primary">{{ $order->status }}</div>
                     </div>
-                @elseif($order->status == 'rejected')
+                @elseif($order->status == 'pending')
+                    <div class="text-secondary">{{ $order->status }}</div>
+                    @elseif($order->status == 'rejected')
                     <div class="text-danger">{{ $order->status }}</div>
                 @else
                     <div class="text-success">{{ $order->status }}</div>
