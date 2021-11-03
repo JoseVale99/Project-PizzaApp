@@ -10011,6 +10011,10 @@ h3 {
     background-color: #FD583B;
     color: #fff;
   }
+  input.list-group-item:hover{
+    background-color: #FD583B;
+    color: #fff;
+  }
   .card-header{
     background-color: #F94425;
     color: #fff;
