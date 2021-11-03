@@ -17,9 +17,9 @@
                             <p class="font-weight-bold">Name: <p class=" font-weight-normal">{{auth()->user()->name}}</p> </p> 
                             <p class="font-weight-bold">Email:  <p class="font-weight-normal">{{auth()->user()->email}}</p></p>
                             <p class="font-weight-bold">Phone Number: <input type="number" class="form-control" name="phone"> </p>
-                            <p class="font-weight-bold">Small Pizza: <input type="number" class="form-control" name="small_pizza" value="0"> </p>
-                            <p class="font-weight-bold">Medium Pizza: <input type="number" class="form-control" name="medium_pizza" value="0"> </p>
-                            <p class="font-weight-bold">Large Pizza: <input type="number" class="form-control" name="large_pizza" value="0"> </p>
+                            <p class="font-weight-bold">Small Pizza: <input type="number" class="form-control" name="small_pizza" min="0" value="0"> </p>
+                            <p class="font-weight-bold">Medium Pizza: <input type="number" class="form-control" name="medium_pizza" min="0" value="0" > </p>
+                            <p class="font-weight-bold">Large Pizza: <input type="number" class="form-control" name="large_pizza" min="0" value="0"> </p>
                             <p><input type="hidden" name="pizza_id" value="{{$pizza->id}}"></p>
                             <p><input type="date" name="date" class="form-control"></p>
                             <p><input type="time" name="time" class="form-control"></p>
@@ -30,6 +30,16 @@
                                 <button class="btn btn-danger btn-block" type="submit">Make order</button>
                             </p>
                        
+                            @if (session('message'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                        @if (session('warning_message'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('warning_message') }}
+                        </div>
+                    @endif
                         </div>
 
                    </form>
