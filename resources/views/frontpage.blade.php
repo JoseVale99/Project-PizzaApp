@@ -10,12 +10,14 @@
 
                 <div class="card-body rounded-lg">
                   <ul class="list-group">
-                    <a href="" class="list-group-item list-group-item-action">Category1</a>
-                    <a href="" class="list-group-item list-group-item-action">Category2</a>
-                    <a href="" class="list-group-item list-group-item-action">Category3</a>
-                    <a href="" class="list-group-item list-group-item-action">Category4</a>
-                    <a href="" class="list-group-item list-group-item-action">Category5</a>
+                    <form action="{{route('frontpage')}}" method="GET">
+                      <input type="submit" value="All pizzas" name="all" class="list-group-item list-group-item-action">
+                      <input type="submit" value="Vegetarian" name="category" class="list-group-item list-group-item-action">
+                      <input type="submit" value="nonvegetarian" name="category" class="list-group-item list-group-item-action"> 
+                      <input type="submit" value="traditional" name="category" class="list-group-item list-group-item-action">      
+                   </form>
                   </ul>
+               <h1 class="text-center">{{count($pizzas)}} pizza</h1>
                 </div>
             </div>
         </div>
