@@ -48,7 +48,7 @@
 
 
                         <table class="table table-bordered table-responsive">
-                            <thead class="thead-dark">
+                            <thead class="table-danger">
                                 <tr>
                                     <th scope="col" class="text-center">#</th>
                                     <th scope="col" class="text-center">Image</th>
