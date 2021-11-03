@@ -6,7 +6,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Order') }}</div>
+                        <div class=" text-right mx-4 mt-2">
+                            <a href="{{route('pizza.create')}}" class="btn btn-primary">Create Pizza</a>
+                            <a href="{{route('pizza.index')}}" class="btn btn-success">View Pizza</a>
 
+                        </div>
                     <div class="card-body">
                         @if (session('message'))
                             <div class="alert alert-success" role="alert">
@@ -14,8 +18,8 @@
                             </div>
                         @endif
 
-                        <table class="table table-responsive">
-                            <thead class="thead-dark">
+                        <table class="table table-responsive table table-striped table-bordered">
+                            <thead class="table-danger">
                                 <tr class="text-center">
                                     <th scope="col">User</th>
                                     <th scope="col">Phone/Email</th>
