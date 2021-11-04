@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserOderController extends Controller
@@ -46,7 +47,7 @@ class UserOderController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -90,5 +91,11 @@ class UserOderController extends Controller
         Order::where('id', '=',$id)->update(['status' =>$request->status]);
 
         return redirect()->route('user.order')->with('message','Pizza update status successfully!');
+    }
+    public function customers(){
+
+        $customers = User::where('is_admin', '=',0)->get(); 
+        
+        return view('customers', compact('customers'));
     }
 }
