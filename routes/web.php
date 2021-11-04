@@ -40,5 +40,9 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::get('/user/order', [UserOderController::class, 'index'])->name('user.order');
     Route::put('/order/{id}/status', [UserOderController::class, 'changeStatus'])->name('order.status');
 
+    // Display all customers
+
+    Route::get('/customers', [UserOderController::class, 'customers'])->name('customers');
+
 
 });
