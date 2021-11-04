@@ -62,7 +62,8 @@
                                         <a class="dropdown-item" href="{{route('home')}}">Your order history</a>
                                     @endif
                                     @if (auth()->user()->is_admin == 1)
-                                    <a class="dropdown-item" href="{{route('user.order')}}">'User history'</a>
+                                    <a class="dropdown-item" href="{{route('customers')}}">All Customers</a>
+                                    <a class="dropdown-item" href="{{route('user.order')}}">User Order</a>
                                 @endif
 
 
